@@ -29,9 +29,16 @@
 </template>
 
 <script setup lang="ts">
+  import { provide } from "vue";
   import { useToast } from "../composables/useToast";
   const { toast } = useToast();
-  import { ToastType } from "../constants/injectionKeys";
-  
+  import { ToastType } from "../types";
+  const {
+    createToast,
+    destroyToast
+  } = useToast();
+  provide("create-toast", createToast);
+  provide("clear-all", destroyToast);
+
 
 </script>

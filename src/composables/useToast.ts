@@ -1,6 +1,7 @@
 import uuid4 from "uuid4";
 import { Ref, ref } from "vue";
-import { Toast, ToastType } from "../constants/injectionKeys";
+import { Toast, ToastType } from "../types";
+
 
 const toast: Ref<Toast[]> = ref([]);
 export function useToast() {

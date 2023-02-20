@@ -1,12 +1,4 @@
-export enum ToastType {
-  Info,
-  Success,
-  Error
-}
+import { InjectionKey, Ref } from "vue";
+import { Toast } from "../types";
 
-export interface Toast {
-  id: string,
-  toastType: ToastType,
-  message: string,
-  duration: number,
-}
+export const ToastKey: InjectionKey<Ref<Toast>> = Symbol('Toast');
